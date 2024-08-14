@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import PhonebookForm from "./PhonebookForm";
 import ContactList from "./ContactList";
+import Header from "./Header";
 
 function Home() {
   const [contacts, setContacts] = useState([]);
@@ -16,8 +17,8 @@ function Home() {
 
 
   return (
-    <div className=" bg-[#4186ae] h-screen flex flex-col">
-      <h1 className=" text-white text-[45px] p-[3%]">Phone Book Application</h1>
+    <div className=" bg-[#4186ae] h-[400vh] flex flex-col">
+     <Header/>
       <PhonebookForm addContact={addContact} />
       <ContactList contacts={contacts} deleteContact={deleteContact} />
     </div>

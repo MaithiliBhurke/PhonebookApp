@@ -2,7 +2,7 @@ import React from "react";
 
 function ContactList({ contacts,deleteContact }) {
   return (
-    <div className=" p-[4%]">
+    <div className=" px-[5%] pt-[4%]">
       <h2 className=" text-[30px] text-white">Contact List</h2>
 
       <table className=" w-[70%] m-[3%] border-2 border-white"> 
@@ -24,7 +24,7 @@ function ContactList({ contacts,deleteContact }) {
               <td className=" text-center">{contact.contactNo1}</td>
               <td className=" text-center">{contact.contactNo2 || "-"}</td>
               <td className=" text-center">
-              <button onClick={() => deleteContact(index)}>Delete</button>
+              <button className=" text-white bg-red-500 m-[6%] px-[8%] py-[4%] rounded-[7px]" onClick={() => deleteContact(index)}>Delete</button>
               </td><br/>
             </tr>
             

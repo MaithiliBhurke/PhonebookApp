@@ -24,10 +24,11 @@ function PhonebookForm({ addContact }) {
   };
 
   return (
-    <div className=" px-[5%]">
+    <div className=" px-[5%] pt-[4%]">
+      <h1 className=" text-white text-[35px] ">Add New Contact</h1>
       <form onSubmit={handleSubmit}>
         <div className=" py-[1%]">
-          <label className=" text-white text-[20px] p-[1%]" htmlFor="">First Name:</label>
+          <label className=" text-white text-[20px] p-[1%] mr-[1%]" htmlFor="">First Name:</label>
           <input className=" bg-transparent border-b-2 border-white text-white w-[25%]"
             type="text"
             value={firstName}
@@ -36,7 +37,7 @@ function PhonebookForm({ addContact }) {
         </div>
 
         <div className=" py-[1%]">
-          <label className=" text-white text-[20px] p-[1%]" htmlFor="">Last Name:</label>
+          <label className=" text-white text-[20px] p-[1%] mr-[1%]" htmlFor="">Last Name:</label>
           <input className=" bg-transparent border-b-2 border-white text-white w-[25%]"
             type="text"
             value={lastName}
@@ -62,7 +63,7 @@ function PhonebookForm({ addContact }) {
           />
         </div>
 
-        <button className=" m-[2%] border-white border-2 p-[10px] text-white rounded-lg" type="submit">Add Contact</button>
+        <button className=" m-[1%] border-white w-[35%] border-2 p-[10px] text-white rounded-lg hover:text-[#4186ae] hover:bg-white" type="submit">Submit</button>
       </form>
     </div>
   );
