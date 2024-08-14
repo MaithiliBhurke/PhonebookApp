@@ -10,10 +10,10 @@ function PhonebookForm({ addContact }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!firstName || !lastName || !contactNo1) {
-      alert("Please fill in all required fields");
-      return;
-    }
+    // if (!firstName || !lastName || !contactNo1) {
+    //   alert("Please fill in all required fields");
+    //   return;
+    // }
 
     const newContact = { firstName, lastName, contactNo1, contactNo2 };
     addContact(newContact);
@@ -30,7 +30,7 @@ function PhonebookForm({ addContact }) {
         <div className=" py-[1%]">
           <label className=" text-white text-[20px] p-[1%] mr-[1%]" htmlFor="">First Name:</label>
           <input className=" bg-transparent border-b-2 border-white text-white w-[25%]"
-            type="text"
+            type="text" required
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
           />
@@ -39,7 +39,7 @@ function PhonebookForm({ addContact }) {
         <div className=" py-[1%]">
           <label className=" text-white text-[20px] p-[1%] mr-[1%]" htmlFor="">Last Name:</label>
           <input className=" bg-transparent border-b-2 border-white text-white w-[25%]"
-            type="text"
+            type="text" required
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
           />
@@ -48,7 +48,7 @@ function PhonebookForm({ addContact }) {
         <div className=" py-[1%]">
           <label className=" text-white text-[20px] p-[1%]" htmlFor="">Contact No 1:</label>
           <input className=" bg-transparent border-b-2 border-white text-white w-[25%]"
-            type="text"
+            type="text" required maxLength={10}
             value={contactNo1}
             onChange={(e) => setcontactNo1(e.target.value)}
           />
